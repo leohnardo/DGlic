@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">HGTSet</string>
+    <string name="Sim">Sim</string>
+    <string name="Nao">Nao</string>
+
+    <string-array name="lista_correcao">
+        <item>30</item>
+        <item>40</item>
+        <item>50</item>
+        <item>60</item>
+        <item>70</item>
+        <item>80</item>
+        <item>90</item>
+        <item>100</item>
+    </string-array>
+
+</resources>
