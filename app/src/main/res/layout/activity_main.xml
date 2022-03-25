@@ -4,25 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/tela1"
+    android:background="@drawable/glicemiabg"
     tools:context=".MainActivity">
-
-    <Button
-        android:id="@+id/fechar"
-        android:layout_width="247dp"
-        android:layout_height="51dp"
-        android:text="Fechar"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="324dp"
-        android:layout_height="490dp"
+        android:layout_width="337dp"
+        android:layout_height="623dp"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -32,23 +21,30 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Glicemia Atual:"
-            android:textColor="#000000"
+            android:textAlignment="center"
+            android:textColor="#742b2c"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:drawableTopCompat="@drawable/ica" />
 
         <EditText
             android:id="@+id/txtHGT"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="number" />
+            android:inputType="number"
+            android:hint="Digite o valor sua Glicemia"
+            android:minHeight="48dp" />
+
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:drawableTop="@drawable/icm"
             android:text="Glicemia Meta:"
-            android:textColor="#35DC3C"
+            android:textAlignment="center"
+            android:textColor="#36730a"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -57,63 +53,85 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="number" />
+            android:hint="Digite a meta definida pelo médico"
+            android:inputType="number"
+            android:minHeight="48dp" />
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Fator de Correção:"
-            android:textColor="#256CFB"
+            android:textAlignment="center"
+            android:textColor="#0a3673"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:drawableTopCompat="@drawable/icc" />
 
         <EditText
             android:id="@+id/txtFator"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="number" />
+            android:inputType="number"
+            android:minHeight="48dp"
+            android:hint="Valor do fator de sensibilidade"
+
+
+            />
 
         <Button
             android:id="@+id/btCalcular"
             android:layout_width="match_parent"
-            android:layout_height="65dp"
+            android:layout_height="60dp"
             android:onClick="calcular"
             android:text="Calcular"
             android:textSize="24sp"
-            app:backgroundTint="#853030" />
+            app:backgroundTint="#742b2c" />
 
         <TextView
             android:id="@+id/textView5"
-            android:layout_width="match_parent"
+            android:layout_width="212dp"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:text="Dose de Correção:"
             android:textAlignment="center"
-            android:textColor="#FFEB3B"
+            android:textColor="#000000"
             android:textSize="24sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/Resultado"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="66dp"
             android:text="0"
             android:textAlignment="center"
-            android:textColor="#FFEB3B"
-            android:textSize="48sp"
+            android:textColor="#8c1a1a"
+            android:textSize="60sp"
             android:textStyle="bold" />
 
     </LinearLayout>
+
+    <Button
+        android:id="@+id/fechar"
+        android:layout_width="247dp"
+        android:layout_height="51dp"
+        android:text="Fechar"
+        android:textSize="16sp"
+        app:backgroundTint="#303030"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="66dp"
-        android:text="Versão Beta 0.2"
+        android:text="Versão Beta 0.3"
         android:textAlignment="viewEnd"
-        android:textSize="10sp"
+        android:textSize="8sp"
         android:textStyle="italic"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
