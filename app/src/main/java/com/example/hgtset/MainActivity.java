@@ -2,8 +2,8 @@ package com.example.hgtset;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
             setContentView(R.layout.activity_main);
+
             setTheme(R.style.theme_Splash);
             Resultado = findViewById(R.id.Resultado);
             txtHGT = findViewById(R.id.txtHGT);
@@ -70,6 +71,12 @@ public class MainActivity extends AppCompatActivity {
                 AlertDialog alert = builder.create();
                 alert.show();
             }
+
+    public void CHO(View v){
+        Intent intent = new Intent(getApplicationContext(),BolusAlimentar.class);
+        startActivity(intent);
+    }
+
            public void calcular(View view) {
                 // verifica campos obrigatórios antes de realizar o calculo.
                 if (txtHGT.getText().toString().equals("")) {
@@ -91,4 +98,5 @@ public class MainActivity extends AppCompatActivity {
                         Resultado.setText(ResultadoFinal);
                 }
             }
+
     }

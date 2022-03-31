@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/glicemiabg"
-    tools:context=".MainActivity">
+    tools:context=".BolusAlimentar">
 
     <LinearLayout
         android:id="@+id/linearLayout"
@@ -20,72 +20,45 @@
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Glicemia Atual:"
+            android:layout_height="44dp"
+            android:text="Quantidade de Carboidratos:"
             android:textAlignment="center"
             android:textColor="#742b2c"
             android:textSize="24sp"
-            android:textStyle="bold"
-            app:drawableTopCompat="@drawable/ica" />
+            android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/txtHGT"
+            android:id="@+id/txtCHO"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="Digite o valor sua Glicemia"
+            android:hint="Digite Quantidade de Carboidrato"
             android:inputType="number"
-            android:minHeight="48dp" />
+            android:minHeight="48dp"
+            android:textSize="12sp" />
 
 
         <TextView
             android:id="@+id/txtBolus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableTop="@drawable/icm"
-            android:text="Glicemia Meta:"
-            android:textAlignment="center"
-            android:textColor="#36730a"
-            android:textSize="24sp"
+            android:text="Bolus alimentar = quantidade de insulina ultra rápida necessária para cobrir os gramas de carboidratos. Regra geral = 1 unidade de insulina para cobrir 15 gramas de carboidratos.  Este bolus para alimentação é individual e pode variar ao longo do dia. Para conhecer sua relação insulina-carboidrato, é importante medir as glicemias antes e duas horas após as refeições. (após a primeira garfada)"
+            android:textAlignment="viewStart"
+            android:textAllCaps="false"
+            android:textColor="@color/material_on_surface_disabled"
+            android:textSize="15sp"
             android:textStyle="bold" />
 
-        <EditText
-            android:id="@+id/txtHGTmeta"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Digite a meta definida pelo médico"
-            android:inputType="number"
-            android:minHeight="48dp" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Fator de Correção:"
-            android:textAlignment="center"
-            android:textColor="#0a3673"
-            android:textSize="24sp"
-            android:textStyle="bold"
-            app:drawableTopCompat="@drawable/icc" />
-
-        <EditText
-            android:id="@+id/txtFator"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="Valor do fator de sensibilidade"
-            android:inputType="number"
-            android:minHeight="48dp"
-
-
-            />
+            android:layout_height="33dp"
+            android:orientation="vertical"></LinearLayout>
 
         <Button
             android:id="@+id/btCalcular"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:onClick="calcular"
+            android:onClick="calcCHO"
             android:text="Calcular"
             android:textSize="24sp"
             app:backgroundTint="#742b2c" />
@@ -100,16 +73,16 @@
             android:layout_width="212dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Dose de Correção:"
+            android:text="Dose de Cobertura:"
             android:textAlignment="center"
             android:textColor="#000000"
             android:textSize="24sp"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/Resultado"
+            android:id="@+id/ResultadoCHO"
             android:layout_width="match_parent"
-            android:layout_height="126dp"
+            android:layout_height="154dp"
             android:text="0"
             android:textAlignment="center"
             android:textColor="#8c1a1a"
@@ -117,24 +90,22 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/button2"
-            android:layout_width="217dp"
+            android:id="@+id/voltar"
+            android:layout_width="247dp"
             android:layout_height="51dp"
-            android:layout_gravity="bottom|center_horizontal"
-            android:layout_weight="1"
-            android:gravity="center|center_horizontal"
-            android:onClick="CHO"
-            android:text="Contar Carboidrato"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal|center_vertical"
+            android:onClick="CalculoHGT"
+            android:text="Voltar"
             android:textAlignment="center"
-            android:textSize="14sp"
+            android:textSize="16sp"
             app:backgroundTint="#303030" />
 
         <Button
             android:id="@+id/fechar"
-            android:layout_width="217dp"
+            android:layout_width="247dp"
             android:layout_height="51dp"
             android:layout_gravity="bottom|center_horizontal"
-            android:layout_weight="1"
             android:text="Fechar"
             android:textAlignment="center"
             android:textSize="16sp"
@@ -143,7 +114,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="674dp"

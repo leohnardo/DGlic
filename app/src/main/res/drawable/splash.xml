@@ -5,7 +5,7 @@
         <item>
         <bitmap
             android:gravity="center"
-            android:src="@drawable/tela" />
+            android:src="@drawable/glicemiabg" />
 
     </item>
 
