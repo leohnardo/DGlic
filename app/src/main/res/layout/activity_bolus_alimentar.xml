@@ -82,7 +82,7 @@
         <TextView
             android:id="@+id/ResultadoCHO"
             android:layout_width="match_parent"
-            android:layout_height="154dp"
+            android:layout_height="210dp"
             android:text="0"
             android:textAlignment="center"
             android:textColor="#8c1a1a"
@@ -101,16 +101,6 @@
             android:textSize="16sp"
             app:backgroundTint="#303030" />
 
-        <Button
-            android:id="@+id/fechar"
-            android:layout_width="247dp"
-            android:layout_height="51dp"
-            android:layout_gravity="bottom|center_horizontal"
-            android:text="Fechar"
-            android:textAlignment="center"
-            android:textSize="16sp"
-            app:backgroundTint="#303030" />
-
     </LinearLayout>
 
     <TextView
@@ -118,7 +108,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="674dp"
-        android:text="Versão Beta 0.3"
+        android:text="Versão Beta 0.4"
         android:textAlignment="viewEnd"
         android:textSize="8sp"
         android:textStyle="italic"

@@ -118,8 +118,8 @@
 
         <Button
             android:id="@+id/button2"
-            android:layout_width="217dp"
-            android:layout_height="51dp"
+            android:layout_width="210dp"
+            android:layout_height="60dp"
             android:layout_gravity="bottom|center_horizontal"
             android:layout_weight="1"
             android:gravity="center|center_horizontal"
@@ -131,8 +131,8 @@
 
         <Button
             android:id="@+id/fechar"
-            android:layout_width="217dp"
-            android:layout_height="51dp"
+            android:layout_width="210dp"
+            android:layout_height="60dp"
             android:layout_gravity="bottom|center_horizontal"
             android:layout_weight="1"
             android:text="Fechar"
@@ -147,7 +147,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="674dp"
-        android:text="Versão Beta 0.3"
+        android:text="Versão Beta 0.4"
         android:textAlignment="viewEnd"
         android:textSize="8sp"
         android:textStyle="italic"
