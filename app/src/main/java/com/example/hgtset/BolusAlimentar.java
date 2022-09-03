@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -35,6 +36,18 @@ public class BolusAlimentar extends AppCompatActivity  {
             ResultadoCHO.setText(ResultadoFinal);
         }
     }
+    public void sobreautor (View view)
+    {
+        try
+        {
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://linktr.ee/lleonardofreitas"));
+            startActivity(browserIntent);
+        }
+        finally
+        {
+        }
+    }
+
     public void CalculoHGT(View v){
         finish();
     }

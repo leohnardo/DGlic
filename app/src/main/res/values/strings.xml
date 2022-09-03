@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">HGTSet</string>
+    <string name="app_name">Glic7</string>
     <string name="Sim">Sim</string>
     <string name="Nao">Nao</string>
 
@@ -13,5 +13,7 @@
         <item>90</item>
         <item>100</item>
     </string-array>
+
+    <string name="link_externo"><a href="https://linktr.ee/lleonardofreitas">Criado por Leonardo Freitas</a></string>
 
 </resources>

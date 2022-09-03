@@ -4,6 +4,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.KeyEvent;
 import android.view.View;
@@ -71,6 +72,18 @@ public class MainActivity extends AppCompatActivity {
                 AlertDialog alert = builder.create();
                 alert.show();
             }
+
+    public void sobreautor (View view)
+    {
+        try
+        {
+            Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse("https://linktr.ee/lleonardofreitas"));
+            startActivity(browserIntent);
+        }
+        finally
+        {
+        }
+    }
 
     public void CHO(View v){
         Intent intent = new Intent(getApplicationContext(),BolusAlimentar.class);
