@@ -14,13 +14,15 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class BolusAlimentar extends AppCompatActivity  {
-    private EditText txtCHO;
+    private EditText txtCHO, txtRCI;
     private TextView ResultadoCHO;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bolus_alimentar);
         txtCHO = findViewById(R.id.txtCHO);
+        txtRCI = findViewById(R.id.txtRCI);
+
         ResultadoCHO = findViewById(R.id.ResultadoCHO);
     }
     public void calcCHO(View view) {
@@ -28,10 +30,15 @@ public class BolusAlimentar extends AppCompatActivity  {
         if (txtCHO.getText().toString().equals("")) {
             Toast.makeText(getApplicationContext(), "Informe Sua Glicemia!", Toast.LENGTH_SHORT).show();
             txtCHO.requestFocus();
+        } else if (txtRCI.getText().toString().equals("")) {
+                Toast.makeText(getApplicationContext(), "Informe o Valor de referência!", Toast.LENGTH_SHORT).show();
+            txtRCI.requestFocus();
         } else {
             //executa a conversão e calcula o resultado final
             double valor1 = Double.parseDouble(txtCHO.getText().toString());
-            double resultadoCalculo = (valor1) * (0.0666666666666667) ;
+            double valor2 = Double.parseDouble(txtRCI.getText().toString());
+            double resultadoCalculo = (valor1) / (valor2);
+            //double resultadoCalculo = (valor1) * (0.0666666666666667) ;
             String ResultadoFinal = String.format("%.2f", resultadoCalculo);
             ResultadoCHO.setText(ResultadoFinal);
         }

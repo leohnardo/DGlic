@@ -20,12 +20,13 @@
         <TextView
             android:id="@+id/textView"
             android:layout_width="match_parent"
-            android:layout_height="44dp"
+            android:layout_height="wrap_content"
             android:text="Quantidade de Carboidratos:"
             android:textAlignment="center"
-            android:textColor="#742b2c"
+            android:textColor="#e59349"
             android:textSize="24sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            app:drawableTopCompat="@drawable/picc" />
 
         <EditText
             android:id="@+id/txtCHO"
@@ -34,19 +35,39 @@
             android:ems="10"
             android:hint="Digite Quantidade de Carboidrato"
             android:inputType="number"
-            android:minHeight="48dp"
-            android:textSize="12sp" />
+            android:minHeight="48dp" />
 
+
+        <TextView
+            android:id="@+id/textView7"
+            style="@style/Widget.AppCompat.TextView.SpinnerItem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Razão Insulina/Carboidrato:"
+            android:textAlignment="center"
+            android:textColor="#784494"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:drawableTopCompat="@drawable/cicc" />
+
+        <EditText
+            android:id="@+id/txtRCI"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="Digite o Valor de Referência"
+            android:inputType="number"
+            android:minHeight="48dp" />
 
         <TextView
             android:id="@+id/txtBolus"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="123dp"
             android:text="Bolus alimentar = quantidade de insulina ultra rápida necessária para cobrir os gramas de carboidratos. Regra geral = 1 unidade de insulina para cobrir 15 gramas de carboidratos.  Este bolus para alimentação é individual e pode variar ao longo do dia. Para conhecer sua relação insulina-carboidrato, é importante medir as glicemias antes e duas horas após as refeições. (após a primeira garfada)"
             android:textAlignment="viewStart"
             android:textAllCaps="false"
             android:textColor="@color/material_on_surface_disabled"
-            android:textSize="15sp"
+            android:textSize="12sp"
             android:textStyle="bold" />
 
         <LinearLayout
@@ -82,7 +103,7 @@
         <TextView
             android:id="@+id/ResultadoCHO"
             android:layout_width="match_parent"
-            android:layout_height="210dp"
+            android:layout_height="135dp"
             android:text="0"
             android:textAlignment="center"
             android:textColor="#8c1a1a"
