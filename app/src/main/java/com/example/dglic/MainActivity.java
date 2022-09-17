@@ -1,4 +1,4 @@
-package com.example.hgtset;
+package com.example.dglic;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,8 +12,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
-import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.example.dglic.R;
 
 public class MainActivity extends AppCompatActivity {
     private EditText txtHGT,txtHGTmeta, txtFator;

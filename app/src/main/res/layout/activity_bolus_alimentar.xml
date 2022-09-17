@@ -73,7 +73,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="33dp"
-            android:orientation="vertical"></LinearLayout>
+            android:orientation="vertical"/>
 
         <Button
             android:id="@+id/btCalcular"

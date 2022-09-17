@@ -1,4 +1,4 @@
-package com.example.hgtset;
+package com.example.dglic;
 
 import org.junit.Test;
 
